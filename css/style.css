@@ -350,6 +350,9 @@ body {
   font-size: 14px;
   line-height: 171%;
   color: #fff;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .menu-footer .menu-footer-list__link::before {
@@ -847,26 +850,28 @@ body {
   transition: all 0.2s ease 0s;
 }
 
-.content-connection__item::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 30px;
+.content-connection__item:nth-child(2) {
+  min-height: 393px;
+  top: -30px;
   background-color: #252B42;
+  color: #fff;
 }
 
-.content-connection__item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  z-index: -1;
-  bottom: 0px;
-  width: 100%;
-  height: 30px;
-  background-color: #252B42;
+.content-connection__item:nth-child(2) .content-connection__item {
+  padding-top: 80px;
+}
+
+.content-connection__item:nth-child(2) .content-connection__item-icon::before {
+  color: #fff;
+}
+
+.content-connection__item:nth-child(2) .content-connection__item-email a {
+  color: #fff;
+}
+
+.content-connection__item:nth-child(2) .content-connection__item-button {
+  color: #fff;
+  border-color: #fff;
 }
 
 .content-connection__item-icon::before {
@@ -894,11 +899,18 @@ body {
 }
 
 .content-connection__item-button {
+  max-width: 160px;
+  max-height: 44px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   padding: 10px 20px;
   border: 1px solid #FF7B47;
   background: none;
   border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171%;
   color: #FF7B47;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1456,6 +1468,10 @@ body {
     color: #161616;
   }
 
+  .menu-footer .menu-footer-list__link:hover {
+    color: #9e9b9b;
+  }
+
   .btn:hover {
     background: #0D5C63;
     color: #fff;
@@ -1479,62 +1495,14 @@ body {
     background-color: #94492c;
   }
 
-  .content-connection__item:hover {
-    background-color: #252B42;
-    color: #fff;
-  }
-
-  .content-connection__item:hover::before {
-    content: "";
-    position: absolute;
-    top: -29px;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    background-color: #252B42;
-    -webkit-transition: all 0.8s ease 0s;
-    -o-transition: all 0.8s ease 0s;
-    transition: all 0.8s ease 0s;
-    z-index: 2;
-  }
-
-  .content-connection__item:hover::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -29px;
-    width: 100%;
-    height: 30px;
-    background-color: #252B42;
-    -webkit-transition: all 0.8s ease 0s;
-    -o-transition: all 0.8s ease 0s;
-    transition: all 0.8s ease 0s;
-    z-index: 2;
-  }
-
-  .content-connection__item:hover .content-connection__item-email a {
-    color: #fff;
-  }
-
-  .content-connection__item:hover .content-connection__item-icon::before {
-    color: #fff;
-  }
-
-  .content-connection__item:hover .content-connection__item-button {
-    color: #fff;
-    border-color: #fff;
+  .content-connection__item:nth-child(2) .content-connection__item-button:hover {
+    background: #fff;
+    color: #252B42;
   }
 
   .content-connection__item-button:hover {
     background: #FF7B47;
     color: #fff;
-  }
-}
-
-@media (any-hover: hover) and (any-hover: hover) {
-  .content-connection__item:hover .content-connection__item-button:hover {
-    background-color: #fff;
-    color: #252B42;
   }
 }
 
